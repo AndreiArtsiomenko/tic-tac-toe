@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__title">
+                    <h1>Tic Tac Toe</h1>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__container container">
+                <div class="main__grid">
+                    <div class="main__box"></div>
+                    <div class="main__box"></div>
+                    <div class="main__box"></div>
+                    <div class="main__box"></div>
+                    <div class="main__box"></div>
+                    <div class="main__box"></div>
+                    <div class="main__box"></div>
+                    <div class="main__box"></div>
+                    <div class="main__box"></div>
+                </div>
+                <div class="main__modal-window window-modal">
+                    <div class="window-modal__body">
+                        <h2>Game over</h2>
+                        <div class="window-modal__result result">
+                            <p class="result__win"></p>
+                            <p class="result__moves"></p>
+                        </div>
+                        <button class="window-modal__btn">New game</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container container">
+                <div class="footer__data">
+                    <div>&copy;</div>
+                    <div class="footer__year">2022</div>
+                    <a href="https://github.com/AndreiArtsiomenko" class="footer__github" target="_blank">github</a>
+                </div>
+                <a class="rsschool__link" href="https://rs.school/js-stage0/" target="_blank"></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+:root {
+    --color-1: #00122e;
+    --color-2: #0abf53;
+    --transit: 0.3s;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+input,
+button,
+textarea {
+    font: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--color-1);
+    background-color: var(--color-2);
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--color-2);
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+
+/*----------------------HEADER-------------------------------------------------------------*/
+
+.header {
+    background-color: var(--color-1);
+}
+
+.header__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-2);
+}
+
+.header__title h1 {
+    font-size: 54px;
+}
+
+
+/*----------------------MAIN---------------------------------------------------------------*/
+
+.main {
+    flex: 1 1 auto;
+    position: relative;
+}
+
+.main__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 306px;
+    height: 306px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-1);
+    gap: 3px;
+}
+
+.main__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-2);
+    font-size: 62px;
+    cursor: pointer;
+}
+
+.main__box:hover {
+    box-shadow: inset 0 0 15px 3px rgba(0, 18, 46, 0.3);
+}
+
+.main__modal-window {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 18, 46, 0.8);
+}
+
+.window-modal__body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    background-color: var(--color-1);
+}
+
+.window-modal__body h2 {
+    color: var(--color-2);
+    text-transform: uppercase;
+}
+
+.window-modal__result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-2);
+}
+
+.window-modal__btn {
+    padding: 5px 30px;
+    color: var(--color-2);
+    background-color: transparent;
+    border: 2px solid var(--color-2);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color, background-color 0.7s ease-out, transform 0.2s ease-out;
+}
+
+.window-modal__btn:hover {
+    color: var(--color-1);
+    background-color: var(--color-2);
+}
+
+.window-modal__btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 -5px 15px rgba(10, 191, 83, 0.3);
+}
+
+
+/*----------------------FOOTER-------------------------------------------------------------*/
+
+.footer {
+    background-color: var(--color-1);
+}
+
+.footer__container {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-2);
+}
+
+.footer__data {
+    display: flex;
+    align-items: center;
+}
+
+.footer__year {
+    padding: 0 20px;
+}
+
+.footer__github {
+    transition: var(--transit);
+}
+
+.footer__github:hover {
+    opacity: 0.6;
+}
+
+.rsschool__link {
+    width: 135px;
+    height: 50px;
+    background: url('./assets/cvg/rss.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: var(--transit);
+}
+
+.rsschool__link:hover {
+    opacity: 0.6;
+}
